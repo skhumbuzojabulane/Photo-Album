@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.902
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Photo Album", "Photo Album\", "{69F6E09F-DBC3-44E2-BACC-90DED3FBD5BF}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_55308"
+		Debug.AspNetCompiler.PhysicalPath = "Photo Album\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_55308\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_55308"
+		Release.AspNetCompiler.PhysicalPath = "Photo Album\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_55308\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "55308"
+		SlnRelativePath = "Photo Album\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{69F6E09F-DBC3-44E2-BACC-90DED3FBD5BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69F6E09F-DBC3-44E2-BACC-90DED3FBD5BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {37E7B17B-7499-48A3-84A4-F83EBED798CE}
+	EndGlobalSection
+EndGlobal
