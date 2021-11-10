@@ -1,0 +1,41 @@
+﻿*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    /*background-color: lightcyan;*/
+    /*padding-top: 50px;*/
+    padding-bottom: 50px;
+}
+
+ul{
+    display: flex;
+    justify-content: center;
+}
+
+ul li {
+    display: inline-block;
+    /*background-color: dodgerblue;*/
+    /*padding: 10px 10px;*/
+    margin: 0 25px;
+    transition: all 0.7s ease;
+}
+
+ul li:hover{
+    background-color: royalblue;
+}
+
+ul li:hover a{
+    color: yellow;
+    font-size: 20px;
+}
+
+ul li a{
+    
+    width: 100%;
+    height: 100%;
+}
+
+
