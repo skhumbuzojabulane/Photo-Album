@@ -7,8 +7,20 @@
     <title></title>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link href="../Content/add.css" rel="stylesheet" />
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap"/>
+    <link href="../Content/add.css" rel="stylesheet" />
+    <style>
+        .footer 
+        {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #ffcccb;
+            color: blue;
+            text-align: center;
+        }
+    </style>
 
     </head>
 <body>
@@ -28,8 +40,8 @@
                     <asp:FileUpload ID="FileUpload1" runat="server" BorderColor="#66CCFF" BorderStyle="Ridge" CssClass="offset-sm-0" Width="340px" />
                     <br />
                     <br />
-                    <label for="captureDate">Capture Date</label>
-                    <input type="date" name="Capture Date" id="captureDate"/>
+                    Capture Date:
+                    <input type="date" name="Capture Date" id="captureDate" />
                     <br />
                     <br />
                     Captured By:
@@ -40,7 +52,6 @@
                     <asp:TextBox ID="geolocation" runat="server"></asp:TextBox>
                     <br />
                     <br />
-                    <br />
                     <asp:Button ID="addPhotoButton" runat="server" OnClick="Button1_Click" Text="Add Photo " Style="margin:0px"  BorderColor="#66CCFF" BorderStyle="Ridge"/>
                     &nbsp;<br />
                     <br />
@@ -49,7 +60,7 @@
             </div>
         </div>
         <div class="footer">
-            <p>Pwidy Photo Album</p>
+            <p>Pwidy Photos</p>
         </div>
     </form>
 </body>

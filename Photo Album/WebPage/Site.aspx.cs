@@ -88,4 +88,15 @@ public partial class WebPage_Site : System.Web.UI.Page
     {
 
     }
+
+    protected void Button3_Click(object sender, EventArgs e)
+    {
+        
+    }
+
+    protected void Button4_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("shareWith.aspx");
+    }
+
 }

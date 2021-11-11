@@ -27,13 +27,41 @@
         <ItemStyle ForeColor="#000066" />
         <ItemTemplate>
             <asp:Image ID="img" runat="server" ImageUrl='<%# Eval("Name","~/images/upload/{0}") %>'  Width="285px" Height="250px"/>
-            <asp:Button ID="cmdDelete" runat="server" OnClientClick="return confirm('Are you sure To Delete')" Text="  Delete  " CommandName="Delete" />
+
+
+
+
+
+            <asp:Button ID="button2" runat="server" OnClientClick="return confirm('Are you sure To Delete')" Text="  Delete  " Onclick="Button2_Click" ></asp:Button>
+     
+
+
+
+
              <asp:Image runat="server" height="20" width="20" ImageUrl="~/Images/Background/icons8-delete-64.png"/>
             <!--<asp:LinkButton ID="LinkButton1" runat="server" Text="Download Photo"></asp:LinkButton>-->
-            <asp:Button ID="Button2" runat="server" OnClientClick="return confirm('Thank You For Downloading!')" Text="  Download  " OnClick="Button2_Click"></asp:Button>
+
+
+
+
+            <asp:Button ID="Button3" runat="server" OnClientClick="return confirm('Thank You For Downloading!')" Text="  Download  " OnClick="Button3_Click"></asp:Button>
+
+
+
+
             <asp:Image runat="server" height="20" width="20" ImageUrl="~/Images/Background/download.gif"/>  
-            <asp:Button ID="Button3" runat="server" OnClientClick="return confirm('Enjoy Sharing With Friends And Famalies!')" Text="  Share  " OnClick="Button2_Click"></asp:Button>
-            <asp:Image runat="server" height="20" width="20" ImageUrl="~/Images/Background/37730-200.png"/> 
+
+
+
+
+            <asp:Button ID="Button4" runat="server" OnClientClick="return confirm('Enjoy Sharing With Friends And Famalies!')" Text="  Share  " OnClick="Button4_Click"></asp:Button>
+
+
+
+
+
+            <asp:Image runat="server" height="20" width="20" ImageUrl="~/Images/Background/37730-200.png"/>   
+
             <br />
             <table class="nav-justified">
                 <tr>
