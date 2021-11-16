@@ -41,11 +41,11 @@
                     <br />
                     <br />
                     Capture Date:
-                    <input type="date" name="Capture Date" id="captureDate" />
-                    <br />
+                    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+&nbsp;<br />
                     <br />
                     Captured By:
-                    <asp:TextBox ID="captureTextBox" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
                     <br />
                     <br />
                     Geolocation:
