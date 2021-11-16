@@ -41,7 +41,10 @@
                      <asp:DropDownList ID="DropDownList1" runat="server" Height="32px" Width="148px"></asp:DropDownList>
                      <br />
                      <br />
-                     <asp:Button ID="shareButton" runat="server" Text="Share" />
+                     <asp:Button ID="shareButton" runat="server" Text="Share" OnClick="shareButton_Click" />
+                     <br />
+                     <br />
+                     <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
                  </div>
              </div>
         </div>

@@ -6,6 +6,14 @@
     <script src="../Scripts/styling.js"></script>
     <link href="../Content/extraStyle.css" rel="stylesheet" />
 
+    <div class="header">
+            <a href="Site.aspx">
+                <img src="../Images/Background/icons8-home-50.png" />
+            </a>
+                <br />
+                Go Home
+                <br />
+    </div>
     <div>
         <asp:GridView ID="GridView1" runat="server" RepeatColumns="4"  HorizontalAlign="Center" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="2" PageSize="2" AllowPaging="True" OnPageIndexChanging="GridView1_PageIndexChanging">
             <Columns>

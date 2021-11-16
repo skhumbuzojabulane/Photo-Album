@@ -18,17 +18,7 @@ public partial class WebPage_Site : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        /*SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\savePhotos.mdf;Integrated Security=True");
-        string sqlquery = "select * from upload";
-        SqlCommand cmd = new SqlCommand(sqlquery, con);
-        con.Open();
-        SqlDataAdapter da = new SqlDataAdapter();
-        da.SelectCommand = cmd;
-        DataSet ds = new DataSet();
-        da.Fill(ds);
-        imgList.DataSource = ds;
-        imgList.DataBind();
-        con.Close();*/
+        
     }
 
     void page_preRender()
@@ -94,11 +84,6 @@ public partial class WebPage_Site : System.Web.UI.Page
         }
     }
 
-    protected void Button2_Click(object sender, EventArgs e)
-    {
-
-    }
-
     protected void Button3_Click(object sender, EventArgs e)
     {
         try
@@ -109,75 +94,11 @@ public partial class WebPage_Site : System.Web.UI.Page
         {
             throw ex;
         }
-
-        /*
-        try
-        {
-            string filePath = (sender as Button).CommandArgument;
-            Response.ContentType = "application/octet-stream";
-            Response.AppendHeader("Content-Disposition", "attachement; filename=" + Path.GetFileName(filePath));
-            Response.TransmitFile(Server.MapPath("~/Images/Upload/" + filePath));
-            Response.End();*/
-
-        /*FileInfo fileInfo = new FileInfo("Images/");
-        Response.Clear();
-        Response.AddHeader("Content-Disposition", "attachment;filename=" + fileInfo.Name);
-        Response.AddHeader("Content-Length", fileInfo.Length.ToString());
-        Response.ContentType = "application/octet-stream";
-        Response.Flush();
-        Response.WriteFile(fileInfo.FullName);
-        Response.End();
-
-        string filePath = "Images/Upload";//+ imgList.DataKeys[gvrow.RowIndex].Value.ToString();
-        Response.ContentType = "gif/png/jpg";
-        Response.AddHeader("Content-Disposition", "attachment;filename=\"" + filePath + "\"");
-        Response.TransmitFile(Server.MapPath(filePath));
-        Response.End();
-
-        string filePath = (sender as Button).CommandArgument;
-        Response.ContentType = ContentType;
-        Response.AppendHeader("Content-Disposition", "attachement; filename=" + Path.GetFileName("Images/Upload/"));
-        Response.WriteFile(filePath);
-        Response.End();
-
-
-        Button btn = sender as Button;
-        DataList gvrow = btn.NamingContainer as DataList;
-        string downloadfile = imgList.DataKeys[gvrow.RowIndex].Value.ToString();
-        Response.ContentType = "Images/Upload/jpg";
-        Response.AppendHeader("Content-Disposition", "attachement;filename=\"" + downloadfile + "\"");
-        Response.TransmitFile(Server.MapPath(downloadfile));
-        Response.End();
-
-    }
-    catch (Exception ex)
-    {
-        throw ex;
-    }*/
     }
 
     protected void Button4_Click(object sender, EventArgs e)
     {
         Response.Redirect("shareWith.aspx");
-    }
-
-
-    protected void imgList_DeleteCommand(object source, DataListCommandEventArgs e)
-    {
-        if (e.CommandName == "Download")
-        {
-            /*try
-            {
-                string filePath = Convert.ToString(e.CommandArgument);
-                File.Delete(filePath);
-                Response.Redirect(Request.Url.AbsoluteUri);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }*/
-        }
-
     }
 
     protected void button2_Command(object sender, CommandEventArgs e)
@@ -201,16 +122,6 @@ public partial class WebPage_Site : System.Web.UI.Page
         {
             throw ex;
         }
-        //string filename = e.CommandArgument.ToString();
-        //File.Delete(Server.MapPath(filename));
-        //FileInfo finfo;
-        //finfo = new FileInfo(filename);
-        //finfo.Delete();
-        //imgList.DataBind();
-
-        /*string filename = e.CommandArgument;
-        filename = Server.MapPath(filename);
-        File.Delete(filename);*/
     }
 
 
@@ -219,7 +130,13 @@ public partial class WebPage_Site : System.Web.UI.Page
     {
         try
         {
-
+            Button linkdownload = sender as Button;
+            GridViewRow gridrow = linkdownload.NamingContainer as GridViewRow;
+            string downloadfile = imgList.DataKeys[gridrow.RowIndex].ToString();
+            Response.ContentType = "Image/Upload/jpg";
+            Response.AddHeader("Content-Disposition", "attachment;filename=\"" + downloadfile + "\"");
+            Response.TransmitFile(Server.MapPath(downloadfile));
+            Response.End();
         }
         catch (Exception ex)
         {
@@ -228,34 +145,6 @@ public partial class WebPage_Site : System.Web.UI.Page
 
 
 
-        /*
-          * 
-          * String filename = @"~/Images/Upload/";
-            FileInfo fileInfo = new FileInfo(filename);
-
-            if (fileInfo.Exists)
-            {
-                Response.Clear();
-                Response.AddHeader("Content-Disposition", "attachment;filename=" + fileInfo.Name);
-                Response.AddHeader("Content-Length", fileInfo.Length.ToString());
-                Response.ContentType = "application/octet-stream";
-                Response.Flush();
-                Response.TransmitFile(fileInfo.FullName);
-                Response.End();
-            }
-
-        FileInfo fileInfo = new FileInfo("~Images/Upload");
-        Response.Clear();
-        Response.AddHeader("Content-Disposition", "attachment;filename=" + fileInfo.Name);
-        Response.AddHeader("Content-Length", fileInfo.Length.ToString());
-        Response.ContentType = "application/octet-stream";
-        Response.Flush();
-        Response.WriteFile(fileInfo.FullName);
-        Response.End();*/
-    }
-
-    protected void imgList_ItemCommand(object source, DataListCommandEventArgs e)
-    {
-        
+       
     }
 }
