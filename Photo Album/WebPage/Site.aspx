@@ -21,7 +21,7 @@
 
             <br />
             <br />
-    <asp:DataList ID="imgList" runat="server" RepeatColumns="4" HorizontalAlign="Center" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Both" OnItemCommand="imgList_ItemCommand">
+    <asp:DataList ID="imgList" runat="server" RepeatColumns="4" HorizontalAlign="Center" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Both" >
         <FooterStyle BackColor="White" ForeColor="#000066" />
         <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
         <ItemStyle ForeColor="#000066" />
